@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Motivational App</title>
+		<style>
+			*{font-size:60px;}
+			body{background-color:linen;}
+		</style>
+	</head>
+	<body>
+	<center>
+	<h1>Motivational App</h1>
+	<form onsubmit="show()">
+			<input type="submit" value="show message"/>
+	</form>
+		<h2 id="msg"/>
+	
+	<script>
+		function show()
+		{
+			event.preventDefault();
+			let msg=document.getElementById("msg");
+			
+			let messages=[
+			"It is never too late to be what you might have been. — George Eliot",
+			"When you put love out in the world it travels, and it can touch people and reach people in ways that we never even expected. — Laverne Cox",
+			"Give light and people will find the way. — Ella Baker",
+			"It always seems impossible until it's done. — Nelson Mandela",
+			];
+			let r=parseInt(Math.random()*messages.length);
+			msg.innerHTML=messages[r];
+		}
+		
+	</script>
+	</center>
+	</body>	
+</html>
